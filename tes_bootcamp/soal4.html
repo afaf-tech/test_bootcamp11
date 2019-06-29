@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Soal 4</title>
+</head>
+<body>
+
+<script>
+	function hitungPohon($tinggiAwal, $tahun){
+		var akhir = $tinggiAwal;
+		for(var t = 1; t<= $tahun ; t++){
+			var semi = akhir + 1;
+			var panas = semi * 3;
+			var gugur = panas - 1.5;
+			var dingin = gugur + (gugur * 15/100);
+			if(t%2 == 0){
+				akhir = dingin / 2;
+			}else{
+				akhir = dingin
+			}
+		
+		}
+	document.write(akhir); 
+	}
+	
+	hitungPohon(2,2);
+	
+</script>
+
+</body>
+</html>
