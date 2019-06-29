@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Soal 5</title>
+</head>
+<body>
+
+    <input type="text" id="txt1"><br>
+    <button onclick=Srt()>Proccess</button><br>
+    <input type="text" id="txt2">
+
+    <script>
+        function cc($id) {
+            return document.getElementById($id);
+        }
+		
+        function Srt(){
+            var Result = "";
+            var Zero = cc('txt1').value.split("0");
+            for(var z = 0; z < Zero.length; z++){
+                var OneNum = Zero[z].split("");
+                OneNum.sort();
+                for(var x = 0; x < OneNum.length; x++){
+                    Result = Result + OneNum[x];
+                }
+            }
+
+            cc('txt2').value = Result;
+        }
+    </script>
+</body>
+</html>
